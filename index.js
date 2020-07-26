@@ -10,7 +10,9 @@ document.getElementById('game-station').style.display = 'none';
 
 function start() {
     document.getElementById('introduction').style.display = 'none';
+    document.getElementById('result-area').style.display = 'none';
     document.getElementById('game-station').style.display = 'block';
+    document.getElementById('game-action').style.display = 'flex';
 }
 function end() {
     document.getElementById('introduction').style.display = 'grid';
