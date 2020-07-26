@@ -141,11 +141,11 @@ button {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 textarea {
-	resize : none;
+    resize: none;
 }
 
 button:focus {
@@ -153,31 +153,165 @@ button:focus {
 }
 
 html {
-	scroll-behavior : smooth;
+    scroll-behavior: smooth;
+    position: relative;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: 'Caveat', cursive;
+    background: url('./images/bg-pattern.jpg') repeat center;
+    overflow-x: hidden;
+}
+
+body:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.015);
+}
+.section-intro{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    gap: 15px;
+    place-items: center;
+}
+.welcome-text{
+    font-size: 48px;
+}
+.welcome-text span{
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+.background-button {
+    position: relative;
+    display: inline-block;
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #333;
+    background-image: url('./images/button-cut.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-size: contain;
+    padding: 10px;
+    width: 180px;
+    height: 48px;
   }
-.game-title{
+  .button-wrapper {
+      margin: 40px auto;
+      text-align: center;
+  }
+  .background-button:after {
+    content: attr(title);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background-image: url('./images/button-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background-button:hover:after {
+    -webkit-transform: translate(2.5%, 10%);
+    transform: translate(2.5%, 10%);
+    text-shadow: 2px 2px 1px #fff;
+    color: #000;
+  }
+
+.game-title {
     font-size: 32px;
     line-height: 1.5;
-    margin:  40px auto;
+    margin: 40px auto;
     text-align: center;
 }
-.game-area{
+
+.game-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
-.text\:center{
-    text-align: center;
+
+.header{
+    background-color: rgba(245, 246, 246, 0.56);
+    border-bottom: 1px solid #c4c8c7;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    padding: 14px 30px;
+    display: flex;
+    justify-content: flex-end;
 }
-.cemetery{
+
+.life .icon{
+    vertical-align: baseline;
+}
+.life,
+.points{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+.life span,
+.points span{
+    font-size: 24px;
+    margin-right: 8px;
+}
+#points{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.btn-end{
+    padding: 4px;
+    display: inline-block;
+    font-size: inherit;
+    line-height: 1.42;
+    padding: 0.2em 0.8em;
+    font-weight: normal;
+    border-width: 3px;
+    border-style: solid;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5em 0.6em / 0.6em 1em 3em 1em;
+    border-radius: 0.5em 0.6em / 0.6em 1em 3em 1em;
+    color: #6D6F7F;
+    border-color: #6D6F7F;
+    box-shadow:3px 0 0 0 #6D6F7F, 3px 3px 0 0 #6D6F7F, 0 3px 0 0 #6D6F7F;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s, background-color 0.3s;
+}
+
+
+.cemetery {
     text-align: center;
     margin-right: 30px;
 }
+
 .action {
     margin-left: 30px;
     display: flex;
@@ -214,7 +348,6 @@ body {
     color: #444;
     box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
 }
-
 .btn-reset {
     position: relative;
     text-transform: uppercase;
@@ -229,7 +362,9 @@ body {
     border-radius: 50%;
     box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
 }
-
+ul li{
+    display: inline-block;
+}
 .btn-reset:after {
     content: "";
     z-index: -1;
@@ -244,4 +379,15 @@ body {
     border-radius: 50%;
     background-color: #f0f0f0;
     box-sizing: content-box;
+}
+
+
+.text\:center {
+    text-align: center;
+}
+.material-icons{
+   color: #FFDF00;
+}
+.hide{
+    display: none;
 }

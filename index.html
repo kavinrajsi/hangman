@@ -5,22 +5,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hangman</title>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Material+Icons&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
-        <h1 class="game-title">Hangman</h1>
-        <div class="text:center">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
-        <div class="game-area">
-        <div class="cemetery">
-            <img id='manPic' src="./images/0.jpg" alt="">
-            <p>Guess the character from avengers who has the power of <span id="hint"></span></p>
-            <p id="spotMe">word to be guessed is html, temp: please look on console</p>
+        <div id="introduction" class="section-intro">
+            <div class="welcome-text text:center ">
+                Welcome to Hangman game
+                <span> to play, press start</span>
+                <span class="button-wrapper">
+                    <a id="start" class="background-button" href="javascript:void(0)" title="Start"> </a>
+                </span>
+            </div>
+
         </div>
-        <div class="action">
-            <div id="keyboard" class="keyboardLayout"></div>
-            <button class="btn-reset" type="reset" onclick="reset()">Reset</button>
-        </div></div>
+        <div id="game-station">
+            <header class="header">
+                <div class="life">
+                    <span>Life : </span>
+                    <ul id="demos">
+                        <li> <i class="material-icons">star</i> </li>
+                        <li> <i class="material-icons">star</i> </li>
+                        <li> <i class="material-icons">star</i> </li>
+                        <li> <i class="material-icons">star</i> </li>
+                        <li> <i class="material-icons">star</i> </li>
+                        <li> <i class="material-icons">star</i> </li>
+                    </ul>
+                </div>
+                <div class="points">
+                    <span>Points:</span>
+                    <input type="number" readonly id="points" value="0">
+                </div>
+                <button id="end" class="btn-end" type="button">End</button>
+            </header>
+            <div class="game-area">
+                <div class="hide text:center">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+                <div class="cemetery">
+                    <img id='manPic' src="./images/0.jpg" alt="">
+                    <p>Guess the character from avengers who has the power of <span id="hint"></span></p>
+                    <p id="spotMe">word to be guessed is html, temp: please look on console</p>
+                </div>
+                <div class="action">
+                    <div id="keyboard" class="keyboardLayout"></div>
+                    <button class="btn-reset" type="reset" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
         <script src="./index.js"></script>
     </body>
 
