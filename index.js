@@ -54,25 +54,25 @@ function createButton() {
 /**
  * keyboar binding with keyboard
  */
-function checkKeycode() {
-    if (window.event.key === 'Enter') {
-        start();
-    } else if (window.event.key === 'Backspace') {
-        reset();
-    } else if (window.event.key === 'Delete') {
-        end();
-    } else if (!window.event.key.match(/[a-z]/i)) {
-        console.log('do');
-    } else {
-        for (let char of letterList) {
-            if (char === window.event.key) {
-                myGuess(window.event.key);
-                console.log('if: ' + window.event.key);
-            }
-        }
-    }
-}
-document.onkeydown = checkKeycode;
+// function checkKeycode() {
+//     if (window.event.key === 'Enter') {
+//         start();
+//     } else if (window.event.key === 'Backspace') {
+//         reset();
+//     } else if (window.event.key === 'Delete') {
+//         end();
+//     } else if (!window.event.key.match(/[a-z]/i)) {
+//         console.log('do');
+//     } else {
+//         for (let char of letterList) {
+//             if (char === window.event.key) {
+//                 myGuess(window.event.key);
+//                 console.log('if: ' + window.event.key);
+//             }
+//         }
+//     }
+// }
+// document.onkeydown = checkKeycode;
 
 /**
  *  assign the value to answer from guessMe array with math random
