@@ -3,467 +3,467 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
+html ,
+body ,
+div ,
+span ,
+applet ,
+object ,
+iframe ,
+h1 ,
+h2 ,
+h3 ,
+h4 ,
+h5 ,
+h6 ,
+p ,
+blockquote ,
+pre ,
+a ,
+abbr ,
+acronym ,
+address ,
+big ,
+cite ,
+code ,
+del ,
+dfn ,
+em ,
+img ,
+ins ,
+kbd ,
+q ,
+s ,
+samp ,
+small ,
+strike ,
+strong ,
+sub ,
+sup ,
+tt ,
+var ,
+b ,
+u ,
+i ,
+center ,
+dl ,
+dt ,
+dd ,
+ol ,
+ul ,
+li ,
+fieldset ,
+form ,
+label ,
+legend ,
+table ,
+caption ,
+tbody ,
+tfoot ,
+thead ,
+tr ,
+th ,
+td ,
+article ,
+aside ,
+canvas ,
+details ,
+embed ,
+figure ,
+figcaption ,
+footer ,
+header ,
+hgroup ,
+menu ,
+nav ,
+output ,
+ruby ,
+section ,
+summary ,
+time ,
+mark ,
+audio ,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+	margin : 0;
+	padding : 0;
+	border : 0;
+	font-size : 100%;
+	font : inherit;
+	vertical-align : baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
+article ,
+aside ,
+details ,
+figcaption ,
+figure ,
+footer ,
+header ,
+hgroup ,
+menu ,
+nav ,
 section {
-    display: block;
+	display : block;
 }
 
 body {
-    line-height: 1;
+	line-height : 1;
 }
 
-ol,
+ol ,
 ul {
-    list-style: none;
+	list-style : none;
 }
 
 ul li {
-    display: inline-block;
+	display : inline-block;
 }
 
 
-button,
-input,
-optgroup,
-select,
-textarea,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"],
-button[disabled],
-html input[disabled],
-button::-moz-focus-inner,
-input::-moz-focus-inner,
-input[type="checkbox"],
-input[type="radio"],
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button,
-input[type="search"],
-input[type="search"]::-webkit-search-cancel-button,
+button ,
+input ,
+optgroup ,
+select ,
+textarea ,
+html input[type="button"] ,
+input[type="reset"] ,
+input[type="submit"] ,
+button[disabled] ,
+html input[disabled] ,
+button::-moz-focus-inner ,
+input::-moz-focus-inner ,
+input[type="checkbox"] ,
+input[type="radio"] ,
+input[type="number"]::-webkit-inner-spin-button ,
+input[type="number"]::-webkit-outer-spin-button ,
+input[type="search"] ,
+input[type="search"]::-webkit-search-cancel-button ,
 input[type="search"]::-webkit-search-decoration {
-    border: none;
-    background-image: none;
-    background-color: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+	border : none;
+	background-image : none;
+	background-color : transparent;
+	-webkit-box-shadow : none;
+	   -moz-box-shadow : none;
+	        box-shadow : none;
 }
 
-*,
-*::before,
+* ,
+*::before ,
 *::after {
-    box-sizing: border-box;
+	box-sizing : border-box;
 }
 
 textarea {
-    resize: none;
+	resize : none;
 }
 
 button:focus {
-    outline: 0;
+	outline : 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    position: relative;
+	scroll-behavior : smooth;
+	position : relative;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-family: 'Caveat', cursive;
-    background: url('./images/bg-pattern.jpg') repeat center;
-    overflow-x: hidden;
+	font-family : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family : "Caveat", cursive;
+	background : url("./images/bg-pattern.jpg") repeat center;
+	overflow-x : hidden;
 }
 
 body:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 0.015);
+	content : "";
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	width : 100%;
+	height : 100%;
+	display : block;
+	z-index : -1;
+	background-color : rgba(0, 0, 0, 0.015);
 }
 
 .section-intro {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    gap: 15px;
-    place-items: center;
+	position : relative;
+	height : 100vh;
+	width : 100vw;
+	display : grid;
+	gap : 15px;
+	place-items : center;
 }
 
 .welcome-text {
-    font-size: 48px;
+	font-size : 48px;
 }
 
 .welcome-text span {
-    display: block;
-    margin-top: 16px;
-    margin-bottom: 40px;
-    font-size: 36px;
+	display : block;
+	margin-top : 16px;
+	margin-bottom : 40px;
+	font-size : 36px;
 }
 
 .background-button {
-    position: relative;
-    display: inline-block;
-    font-family: 'Caveat', cursive;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-decoration: none;
-    color: #333;
-    background-image: url('./images/button-cut.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    background-size: contain;
-    padding: 10px;
-    width: 180px;
-    height: 48px;
+	position : relative;
+	display : inline-block;
+	font-family : "Caveat", cursive;
+	font-size : 28px;
+	font-weight : 700;
+	letter-spacing : 3px;
+	text-decoration : none;
+	color : #333333;
+	background-image : url("./images/button-cut.png");
+	background-repeat : no-repeat;
+	background-position : center;
+	background-size : 100% 100%;
+	background-size : contain;
+	padding : 10px;
+	width : 180px;
+	height : 48px;
 }
 
 .button-wrapper {
-    margin: 40px auto;
-    text-align: center;
+	margin : 40px auto;
+	text-align : center;
 }
 
 .background-button:after {
-    content: attr(title);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    background-image: url('./images/button-bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	content : attr(title);
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	top : 0;
+	left : 0;
+	display : block;
+	background-image : url("./images/button-bg.png");
+	background-size : contain;
+	background-repeat : no-repeat;
+	background-position : center;
+	transition : all 0.3s;
+	display : flex;
+	justify-content : center;
+	align-items : center;
 }
 
 .background-button:hover:after {
-    -webkit-transform: translate(2.5%, 10%);
-    transform: translate(2.5%, 10%);
-    text-shadow: 2px 2px 1px #fff;
-    color: #000;
+	-webkit-transform : translate(2.5%, 10%);
+	        transform : translate(2.5%, 10%);
+	text-shadow : 2px 2px 1px #ffffff;
+	color : #000000;
 }
 
 .game-title {
-    font-size: 32px;
-    line-height: 1.5;
-    margin: 40px auto;
-    text-align: center;
+	font-size : 32px;
+	line-height : 1.5;
+	margin : 40px auto;
+	text-align : center;
 }
 
 .header {
-    background-color: rgba(245, 246, 246, 0.56);
-    border-bottom: 1px solid #c4c8c7;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 14px 30px;
-    display: flex;
-    justify-content: flex-end;
+	background-color : rgba(245, 246, 246, 0.56);
+	border-bottom : 1px solid #c4c8c7;
+	position : fixed;
+	top : 0;
+	left : 0;
+	right : 0;
+	width : 100%;
+	padding : 14px 30px;
+	display : flex;
+	justify-content : flex-end;
 }
 
 .life .icon {
-    vertical-align: baseline;
+	vertical-align : baseline;
 }
 
-.life,
+.life ,
 .points {
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
+	margin-right : 30px;
+	display : flex;
+	align-items : center;
 }
 
-.life span,
+.life span ,
 .points span {
-    font-size: 24px;
-    margin-right: 8px;
+	font-size : 24px;
+	margin-right : 8px;
 }
 
 #points {
-    font-size: 30px;
-    font-weight: 700;
+	font-size : 30px;
+	font-weight : 700;
 }
 
 [type="number"] {
-    border: 0;
-    max-width: 60px;
-    background: transparent;
-    border: solid #333;
-    border-width: 2px;
-    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-    transform: rotate(2deg);
-    text-align: center;
+	border : 0;
+	max-width : 60px;
+	background : transparent;
+	border : solid #333333;
+	border-width : 2px;
+	border-radius : 95% 4% 97% 5%/4% 94% 3% 95%;
+	transform : rotate(2deg);
+	text-align : center;
 }
 
-.btn-start,
+.btn-start ,
 .btn-end {
-    padding: 4px;
-    display: inline-block;
-    font-size: inherit;
-    line-height: 1.42;
-    padding: 0.2em 0.8em;
-    font-weight: normal;
-    border-width: 3px;
-    border-style: solid;
-    background: transparent;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 0.5em 0.6em / 0.6em 1em 3em 1em;
-    border-radius: 0.5em 0.6em / 0.6em 1em 3em 1em;
-    color: #6D6F7F;
-    border-color: #6D6F7F;
-    box-shadow: 3px 0 0 0 #6D6F7F, 3px 3px 0 0 #6D6F7F, 0 3px 0 0 #6D6F7F;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s, background-color 0.3s;
+	padding : 4px;
+	display : inline-block;
+	font-size : inherit;
+	line-height : 1.42;
+	padding : 0.2em 0.8em;
+	font-weight : normal;
+	border-width : 3px;
+	border-style : solid;
+	background : transparent;
+	cursor : pointer;
+	user-select : none;
+	border-radius : 0.5em 0.6em / 0.6em 1em 3em 1em;
+	border-radius : 0.5em 0.6em / 0.6em 1em 3em 1em;
+	color : #6d6f7f;
+	border-color : #6d6f7f;
+	box-shadow : 3px 0 0 0 #6d6f7f, 3px 3px 0 0 #6d6f7f, 0 3px 0 0 #6d6f7f;
+	transition : transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s, background-color 0.3s;
 }
 
 .cemetery {
-    text-align: center;
-    margin-right: 30px;
+	text-align : center;
+	margin-right : 30px;
 }
 
 .game-action {
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	margin-left : 30px;
+	display : flex;
+	align-items : center;
+	justify-content : center;
 }
 
 .game-world {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
-    margin-bottom: 30px;
-    height: calc(100vh - 60px);
+	display : flex;
+	flex-wrap : wrap;
+	justify-content : center;
+	align-items : center;
+	padding-top : 60px;
+	margin-bottom : 30px;
+	height : calc(100vh - 60px);
 }
 
 .game-area-action {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
+	display : flex;
+	align-items : center;
+	margin-top : 50px;
 }
 
 .game-area p {
-    max-width: 556px;
-    font-size: 24px;
-    text-align: center;
+	max-width : 556px;
+	font-size : 24px;
+	text-align : center;
 }
 
 .keyboardLayout {
-    /* TODO: Need to align the key like keyboard */
-    max-width: 556px;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(10, 1fr);
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    margin-right: 40px;
+	/* TODO: Need to align the key like keyboard */
+	max-width : 556px;
+	display : grid;
+	gap : 15px;
+	grid-template-columns : repeat(10, 1fr);
+	padding : 30px;
+	background-color : #f0f0f0;
+	border-radius : 8px;
+	margin-right : 40px;
 }
 
 .keyboard-key {
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.3;
-    letter-spacing: 0.5px;
-    user-select: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    width: 36px;
-    height: 36px;
-    border-radius: 3.6px;
-    background-color: #fff;
-    color: #444;
-    box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+	cursor : pointer;
+	font-size : 14px;
+	line-height : 1.3;
+	letter-spacing : 0.5px;
+	user-select : none;
+	text-transform : uppercase;
+	white-space : nowrap;
+	display : inline-block;
+	position : relative;
+	width : 36px;
+	height : 36px;
+	border-radius : 3.6px;
+	background-color : #ffffff;
+	color : #444444;
+	box-shadow : inset 0 -2px 0 #aaaaaa, inset 0 1px 1px -1px #ffffff, 0 1px 1px 0 #7a7a7a;
 }
 
 .btn-reset {
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.3;
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
-    color: #444;
-    border-radius: 50%;
-    box-shadow: inset 0 -2px 0 #aaaaaa, inset 0px 1px 1px -1px #fff, 0px 1px 1px 0px #7a7a7a;
+	position : relative;
+	text-transform : uppercase;
+	letter-spacing : 0.5px;
+	cursor : pointer;
+	font-size : 14px;
+	line-height : 1.3;
+	width : 120px;
+	height : 120px;
+	background-color : #ffffff;
+	color : #444444;
+	border-radius : 50%;
+	box-shadow : inset 0 -2px 0 #aaaaaa, inset 0 1px 1px -1px #ffffff, 0 1px 1px 0 #7a7a7a;
 }
 
 .btn-reset:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    box-sizing: content-box;
+	content : "";
+	z-index : -1;
+	position : absolute;
+	top : -10px;
+	left : -10px;
+	right : 0;
+	width : 100%;
+	height : 100%;
+	padding : 10px;
+	margin : 0 auto;
+	border-radius : 50%;
+	background-color : #f0f0f0;
+	box-sizing : content-box;
 }
 
 
 .text\:center {
-    text-align: center;
+	text-align : center;
 }
 
 .material-icons {
-    color: #FFDF00;
+	color : #ffdf00;
 }
 
 .hide {
-    display: none;
+	display : none;
 }
 
 .game-result {
-    display: none;
+	display : none;
 }
 
 .result-status {
-    transform: rotate(-2deg);
+	transform : rotate(-2deg);
 }
 
 .result-status-wrapper {
-    display: block;
-    padding: 10px;
-    font-size: 30px;
-    line-height: 1.42;
-    font-weight: 700;
-    border-style: solid;
-    padding: 40px;
-    margin: 0 auto 60px;
-    border: solid #333;
-    border-width: 2px;
-    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-    transform: rotate(2deg);
-    text-align: center;
+	display : block;
+	padding : 10px;
+	font-size : 30px;
+	line-height : 1.42;
+	font-weight : 700;
+	border-style : solid;
+	padding : 40px;
+	margin : 0 auto 60px;
+	border : solid #333333;
+	border-width : 2px;
+	border-radius : 95% 4% 97% 5%/4% 94% 3% 95%;
+	transform : rotate(2deg);
+	text-align : center;
 }
-.btn-start{
-    padding: 10px 20px;
-    margin: 0 auto;
-    display: block;
-    font-size: 25px;
+.btn-start {
+	padding : 10px 20px;
+	margin : 0 auto;
+	display : block;
+	font-size : 25px;
 }
