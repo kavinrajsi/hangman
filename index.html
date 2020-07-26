@@ -39,16 +39,25 @@
                 </div>
                 <button id="end" class="btn-end" type="button">End</button>
             </header>
-            <div class="game-area">
+            <div class="game-world">
                 <div class="hide text:center">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+                <div id="game-action" class="game-action">
                 <div class="cemetery">
                     <img id='manPic' src="./images/0.jpg" alt="">
-                    <p>Guess the character from avengers who has the power of <span id="hint"></span></p>
-                    <p id="spotMe">word to be guessed is html, temp: please look on console</p>
                 </div>
-                <div class="action">
+                <div class="game-area">
+                    <p><span id="hint"></span></p>
+                    <p id="spotMe">word to be guessed is html, temp: please look on console</p>
+                    <div class="game-area-action">
                     <div id="keyboard" class="keyboardLayout"></div>
                     <button class="btn-reset" type="reset" onclick="reset()">Reset</button>
+                </div>
+                </div>
+            </div>
+                <div id="result-area" class="game-result">
+                    <div class="result-status-wrapper">
+                    <div class="result-status"></div></div>
+                    <button class="btn-start" onclick="restart()" type="button">Start</button>
                 </div>
             </div>
         </div>

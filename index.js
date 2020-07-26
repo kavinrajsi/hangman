@@ -1,4 +1,4 @@
-let answer = '', mistakes = 0, maxWrong = 6, judgeme = '', guessed = [], score = 66;
+let answer = '', mistakes = 0, maxWrong = 6, judgeme = '', guessed = [], score =parseInt(document.getElementById("points").value);
 let guessMe = ['antman', 'spiderman', 'iornman', 'blackpanther', 'deadpool', 'captianamerica', 'hulk'];
 let guessMe2 = ['ramnathkovind', 'pranabmukherjee', 'pratibhapatil', 'abdulkalam', 'kocherilramannarayanan', 'shankardayalsharma', 'ramaswamyvenkataraman'];
 let letterList = "abcdefghijklmnopqrstuvwxyz";
@@ -13,8 +13,10 @@ function start() {
     document.getElementById('game-station').style.display = 'block';
 }
 function end() {
-    document.getElementById('introduction').style.display = 'block';
+    document.getElementById('introduction').style.display = 'grid';
     document.getElementById('game-station').style.display = 'none';
+    reset();
+     document.getElementById("points").value = 0;
 }
 document.getElementById("start").onclick = function () {
     start();
@@ -22,6 +24,12 @@ document.getElementById("start").onclick = function () {
 document.getElementById("end").onclick = function () {
     end();
 };
+
+function restart() {
+    document.getElementById('result-area').style.display = 'none';
+    document.getElementById('game-action').style.display = 'flex';
+    reset();
+}
 
 /**
  * Create keyboard layout
@@ -69,9 +77,10 @@ document.onkeydown = checkKeycode;
  *  added dash to #spotMe
  */
 function randomWord() {
+    console.log(score);
     if (score < 10) {
         answer = guessMe[Math.floor(Math.random() * guessMe.length)];
-    } else if (score > 60) {
+    } else if (score > 15) {
         answer = guessMe2[Math.floor(Math.random() * guessMe2.length)];
     }
     //// let answerArray = [];
@@ -79,7 +88,7 @@ function randomWord() {
     // //     answerArray[i] = ' _ ';
     // //     document.getElementById('spotMe').innerHTML += answerArray[i];
     // // }
-    console.log(answer);
+    // console.log(answer);
 }
 
 
@@ -89,25 +98,25 @@ function randomWord() {
 function hint() {
     switch (answer) {
         case 'antman':
-            document.getElementById('hint').innerHTML = 'ant';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of ant';
             break;
         case 'spiderman':
-            document.getElementById('hint').innerHTML = 'spiderman';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of spiderman';
             break;
         case 'iornman':
-            document.getElementById('hint').innerHTML = 'electronics';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of electronics';
             break;
         case 'blackpanther':
-            document.getElementById('hint').innerHTML = 'panther';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of panther';
             break;
         case 'deadpool':
-            document.getElementById('hint').innerHTML = 'dead';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of dead';
             break;
         case 'hulk':
-            document.getElementById('hint').innerHTML = 'green';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of green';
             break;
         case 'captianamerica':
-            document.getElementById('hint').innerHTML = 'america';
+            document.getElementById('hint').innerHTML = 'Guess the character from avengers who has the power of america';
             break;
         case 'ramnathkovind':
             document.getElementById('hint').innerHTML = '14th president';
@@ -172,7 +181,7 @@ function checkWord() {
 function guessWorngCount() {
     document.getElementById('mistakes').innerHTML = mistakes;
     document.querySelector(`#demos li:nth-child(${mistakes}) i`).style.color='#FF0000';
-    // document.getElementById('demos').innerHTML += '<li> <i class="icon outline-star"></i> </li>';
+    document.querySelector(`#demos li:nth-child(${mistakes}) i`).style.transition = "color 0.5s linear 0s";
 }
 
 /**
@@ -190,7 +199,10 @@ function gameWon() {
         let score = parseInt(document.getElementById("points").value);
         console.log('word: ' + wordStatus.length);
         console.log('scrore: ' + score);
-        document.getElementById('keyboard').innerHTML = 'You Won!!!';
+        document.getElementById('game-action').style.display = 'none';
+        document.getElementById('game-action').style.transition = "display 0.5s linear 0s";
+        document.getElementById('result-area').style.display = 'block';
+        document.querySelector('.result-status').innerHTML = '🙌, let try another word by pressing start';
         document.getElementById('points').value = score + wordStatus.length;
     }
 }
@@ -200,7 +212,10 @@ function gameWon() {
  */
 function gameLoss() {
     if (mistakes === maxWrong) {
-        document.getElementById('keyboard').innerHTML = 'You Lost!!!';
+        document.getElementById('game-action').style.display = 'none';
+        document.getElementById('game-action').style.transition = "display 0.5s linear 0s";
+        document.getElementById('result-area').style.display = 'block';
+        document.querySelector('.result-status').innerHTML = 'You had a great progrees 👍 . Press start to rework';
     }
 }
 
@@ -208,13 +223,21 @@ function gameLoss() {
  * Reset
  */
 function reset() {
+    console.clear();
     mistakes = 0;
     guessed = [];
-    document.querySelector(`#demos li i`).style.color='#FFDF00';
+    let elems = document.querySelectorAll('#demos li i');
+    let length = elems.length;
+    for (let index = 0; index < length; index++) {
+        elems[index].style.transition = "color 0.5s linear 0s";
+        elems[index].style.color='#FFDF00';
+    }
+
     document.getElementById('manPic').src = './images/0.jpg';
     createButton();
+    randomWord();
+    hint();
     checkWord();
-    console.clear();
 }
 
 // function calling
